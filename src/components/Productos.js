@@ -6,7 +6,7 @@ export function Productos() {
   const [dataProductos, setDataProductos] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:3500/api/productos/mostrarproductos")
+    axios.get("https://nfa-password.onrender.com/api/productos/mostrarproductos")
       .then((respuesta) => {
         console.log(respuesta);
         setDataProductos(respuesta.data); // Asumo que los datos están en el campo "data" de la respuesta
@@ -16,10 +16,10 @@ export function Productos() {
       });
   }, []);
 
-  const listaUsuarios = dataProductos.map((usuario) => {
+  const listaProductos = dataProductos.map((usuario) => {
     var Editar = "/Editar/"+usuario.editar;
     var borrar = "/Borrar" +usuario.borrar;
-    const foto = "https://localhost:3000/images" + usuario.foto;
+    const foto = "https://nfa-password.onrender.com/images/" + usuario.foto;
     return (
       <tr key={usuario.id}>
         <td>{usuario.id}</td>
@@ -50,7 +50,7 @@ export function Productos() {
                   <th>Editar/Borrar</th>
                 </tr>
               </thead>
-              <tbody>{listaUsuarios}</tbody>
+              <tbody>{listaProductos}</tbody>
               </table>
           </div>
         </div>

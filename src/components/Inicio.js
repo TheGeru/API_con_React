@@ -6,7 +6,7 @@ export function Inicio() {
   const [dataUsuarios, setDataUsuarios] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:3500/api/mostrarusuarios")
+    axios.get("https://nfa-password.onrender.com/api/mostrarusuarios")
       .then((respuesta) => {
         console.log(respuesta);
         setDataUsuarios(respuesta.data); // Asumo que los datos están en el campo "data" de la respuesta
@@ -19,7 +19,7 @@ export function Inicio() {
   const listaUsuarios = dataUsuarios.map((usuario) => {
     var Editar = "/Editar/"+usuario.editar;
     var borrar = "/Borrar" +usuario.borrar;
-    const foto = "https://localhost:3000/images" + usuario.foto;
+    const foto = "https://nfa-password.onrender.com/images/" + usuario.foto;
     return (
       <tr key={usuario.id}>
         <td>{usuario.id}</td>
