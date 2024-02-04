@@ -12,7 +12,7 @@ export function Rutas(){
             <Routes>
                 <Route path="*" element={<Error />}></Route>
                 <Route path="/" element={<Inicio />}></Route>
-                <Route path="/productos" element={<Productos/>}></Route>
+                <Route path="/productos" element={<Productos />}></Route>
             </Routes>
         </BrowserRouter>        
         </>
