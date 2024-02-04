@@ -4,7 +4,7 @@ import { Inicio } from "./Inicio";
 import { Menu } from "./Menu";
 import { Productos } from "./Productos";
 
-export function Rutas() {
+export default function Rutas() {
   return (
     <>
       <Menu />
