@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
-export function Productos() {
+export function Inicio() {
   const [dataProductos, setDataProductos] = useState([]);
 
   useEffect(() => {
